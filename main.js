@@ -1,13 +1,26 @@
-let personagem = {
-    nome: "Valente",
-    vida: 100,
-    forca: 20,
-    recursos: 50, // Recursos como dinheiro ou poções
-    magia: 30 // Poder de magia
-};
-
+let personagem; // Inicializamos o personagem vazio no começo
 let inimigo; // Inicializamos o inimigo vazio no começo
 let rodada = 1; // Contador de rodadas
+
+// Função para escolher o personagem
+function escolherPersonagem(opcao) {
+    switch (opcao) {
+        case 1:
+            personagem = { nome: "Chapeuzinho Vermelho", vida: 100, forca: 20, recursos: 50, magia: 30 };
+            break;
+        case 2:
+            personagem = { nome: "Porquinho", vida: 120, forca: 15, recursos: 40, magia: 20 };
+            break;
+        case 3:
+            personagem = { nome: "Princesa", vida: 90, forca: 25, recursos: 60, magia: 40 };
+            break;
+        default:
+            console.log("Escolha inválida! Selecione uma opção entre 1 e 3.");
+            return false;
+    }
+    console.log(`Você escolheu jogar como ${personagem.nome}! VIDA: ${personagem.vida}, FORÇA: ${personagem.forca}, RECURSOS: ${personagem.recursos}, MAGIA: ${personagem.magia}`);
+    return true; // Personagem escolhido com sucesso
+}
 
 // Função para escolher o vilão
 function escolherVilao(opcao) {
@@ -32,9 +45,17 @@ function escolherVilao(opcao) {
     return true; // Vilão escolhido com sucesso
 }
 
-// Função para iniciar o jogo e apresentar o menu de vilão
+// Função para iniciar o jogo e apresentar o menu de seleção de personagem e vilão
 function start() {
-    console.log("Escolha seu vilão para a batalha:");
+    console.log("Escolha seu personagem:");
+    console.log("1 - Chapeuzinho Vermelho");
+    console.log("2 - Porquinho");
+    console.log("3 - Princesa");
+
+    let personagemEscolhido = parseInt(prompt("Digite o número do personagem que você deseja jogar:"));
+    if (!escolherPersonagem(personagemEscolhido)) return; // Checa se o personagem foi escolhido corretamente
+
+    console.log("\nEscolha seu vilão para a batalha:");
     console.log("1 - Lobo Mau");
     console.log("2 - Bruxa");
     console.log("3 - Bicho Papão");
@@ -44,9 +65,6 @@ function start() {
     if (!escolherVilao(vilaoEscolhido)) return; // Checa se o vilão foi escolhido corretamente
     
     // Reiniciando a vida e recursos dos personagens
-    personagem.vida = 100;
-    personagem.recursos = 50;
-    personagem.magia = 30;
     rodada = 1; // Reinicia o contador de rodadas
     
     console.log(`\nBem-vindo à aventura, ${personagem.nome}!`);
@@ -149,4 +167,4 @@ function proximoRound() {
 }
 
 // Exemplo de uso:
-// Para iniciar o jogo, basta digitar `start();` no console para escolher o vilão e começar.
+// Para iniciar o jogo, basta digitar `start();` no console para escolher o personagem, vilão e começar a aventura.
