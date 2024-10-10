@@ -1,6 +1,6 @@
 # atividade-12
 
-Autora: Valéria Ornelas Santos
+Autora: Valéria Ornelas Santos e Leidiane dos Santos Cruz
 
 # Jogo de Aventura: Valente vs Monstro
 
