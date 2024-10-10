@@ -338,9 +338,13 @@ function proximoRound() {
     }
 
     let escolhaAtaque = parseInt(prompt("Digite o número da sua ação:"));
+
     if (escolhaAtaque === 4 && personagem.recursos <= 0) {
         console.log("Você não pode usar recursos, eles acabaram!");
-        escolhaAtaque = parseInt(prompt("Escolha uma ação válida:"));
+        // Exibe novamente as opções, sem permitir usar recurso
+        proximoRound();
+        return; // Retorna para evitar que o código continue
     }
+
     enfrentarDesafio(escolhaAtaque);
 }
