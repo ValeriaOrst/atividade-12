@@ -165,6 +165,3 @@ function proximoRound() {
     let escolhaAtaque = parseInt(prompt("Digite o número da sua ação:"));
     enfrentarDesafio(escolhaAtaque);
 }
-
-// Exemplo de uso:
-// Para iniciar o jogo, basta digitar `start();` no console para escolher o personagem, vilão e começar a aventura.
