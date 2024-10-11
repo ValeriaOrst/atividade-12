@@ -2,11 +2,11 @@
 
 ## Autores: Valéria Ornelas Santos e Leidiane dos Santos Cruz
 
-# Jogo de Aventura - Combate Épico
+# Jogo de Aventura - Deu a Louca no Mundo da Fantasia
 
 ## Descrição do Jogo
 
-Bem-vindo ao **Combate Épico**, um jogo de batalha interativa onde você escolhe entre personagens clássicos de contos de fadas e enfrenta vilões temíveis! Cada personagem tem atributos únicos como vida, força, magia e recursos, e seu objetivo é derrotar o vilão escolhido através de rodadas estratégicas de combate.
+Bem-vindo ao **Deu a Louca no Mundo da Fantasia**, um jogo de batalha interativa onde você escolhe entre personagens clássicos de contos de fadas e enfrenta vilões temíveis! Cada personagem tem atributos únicos como vida, força, magia e recursos, e seu objetivo é derrotar o vilão escolhido através de rodadas estratégicas de combate.
 
 ## Regras
 
